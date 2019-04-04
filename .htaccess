@@ -1,0 +1,30 @@
+AddDefaultCharset UTF-8
+DirectoryIndex  index.html
+php_flag register_globals On
+RewriteEngine On
+
+php_flag display_startup_errors Off
+php_flag display_errors Off
+php_flag html_errors Off
+php_flag log_errors Off
+php_value error_log /php_error.log
+
+ErrorDocument 400 /error_page.php
+ErrorDocument 403 /error_page.php
+ErrorDocument 404 /error_page.php
+ErrorDocument 405 /error_page.php
+ErrorDocument 408 /error_page.php
+ErrorDocument 500 /error_page.php
+ErrorDocument 502 /error_page.php
+ErrorDocument 504 /error_page.php
+
+<FilesMatch ".(htaccess|ini|tpl)$">
+  order allow,deny
+  deny from all
+</FilesMatch>
+
+RewriteRule ^api/users.get+$ /api/methods/users.get.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*) /router.php [L,QSA]

@@ -1,0 +1,290 @@
+
+  .drop_down {
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    .drop_down_container {
+      width: 100%;
+      box-sizing: border-box;
+      float: left;
+      min-height: 38px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background: rgb(255, 255, 255);
+      border: 1px solid rgb(211, 217, 222);
+      padding: 2px 2px 1px;
+      position: relative;
+      overflow: visible !important;
+      .drop_down_container_content {
+        width: 100%;
+        float: left;
+        position: relative;
+        .drop_down_c_left {
+          float: left;
+          width: calc(~"100% - 28px");
+          min-height: 28px;
+          input {
+            margin: 0;
+            padding: 0 7px;
+            box-sizing: border-box;
+            background: rgb(255, 255, 255);
+            line-height: 24px;
+            font-size: 14px;
+            color: rgb(82, 82, 82);
+            float: left;
+            width: 100%;
+            border: none;
+            outline: none;
+            height: 31px;
+          }
+        }
+        .drop_down_c_right {
+          width: 28px;
+          height: 100%;
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          display: flex;
+          .drop_down_svg_vector {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            svg {
+              width: 24px;
+              height: 100%;
+              margin: 1px auto 0;
+              path {
+                fill: rgb(190, 198, 204);
+              }
+            }
+          }
+        }
+      }
+
+      .drop_down_store_item {
+        background-color: rgb(81, 129, 184);
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        margin: 5px 0 2px 5px;
+        height: 22px;
+        box-sizing: border-box;
+        padding: 1px 1px 0 5px;
+        float: left;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        .drop_down_store_item_left {
+          float: left;
+          width: calc(~"100% - 20px");
+          height: 20px;
+          display: flex;
+          span {
+            margin: auto;
+            color: rgba(255,255,255,0.9);
+            line-height: 12px;
+            font-size: 12px;
+          }
+        }
+        .drop_down_store_item_right {
+          width: 20px;
+          height: 20px;
+          float: right;
+          cursor: pointer;
+          span {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            svg {
+              width: 17px;
+              height: 17px;
+              margin: 2px 0 0 1.5px;
+              path {
+                fill: rgba(255,255,255,0.9);
+              }
+            }
+          }
+        }
+      }
+
+      .drop_down_store_item.drop_down_add_button {
+        background-color: rgba(174, 183, 193, 0.19);
+        .drop_down_store_item_left span {
+          color: rgb(81, 129, 184);
+        }
+        svg {
+          path {
+            fill: rgb(81, 129, 184) !important;
+          }
+        }
+      }
+
+      .drop_down_items {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(211, 217, 222);
+        left: -1px;
+        z-index: 100;
+        -webkit-border-radius: 0 0 2px 2px;
+        -moz-border-radius: 0 0 2px 2px;
+        border-radius: 0 0 2px 2px;
+        -webkit-box-shadow: 0 3px 3px 0px rgba(0,0,0,0.02);
+        -moz-box-shadow: 0 3px 3px 0px rgba(0,0,0,0.02);
+        box-shadow: 0 3px 3px 0px rgba(0,0,0,0.02);
+        overflow: hidden;
+        .drop_down_result .drop_down_item:last-child {
+          border-bottom: 0 !important;
+        }
+        .drop_down_result {
+          overflow-y: hidden;
+          max-height: 200px;
+          .drop_down_item {
+            width: 100%;
+            float: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+            box-sizing: border-box;
+            cursor: pointer;
+            padding: 7.5px;
+            .drop_down_item_left {
+              width: 35px;
+              height: 35px;
+              float: left;
+              .drop_down_item_photo {
+                width: 35px;
+                height: 35px;
+                float: left;
+                background-color: #e4e3e2;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-border-radius: 17.5px;
+                -moz-border-radius: 17.5px;
+                border-radius: 17.5px;
+              }
+            }
+            .drop_down_item_content {
+              float: left;
+              width: calc(~"100% - 70px");
+              box-sizing: border-box;
+              padding: 0 10px;
+              .drop_down_name {
+                width: 100%;
+                float: left;
+                span {
+                  line-height: 17.5px;
+                  font-weight: 500;
+                  color: #000;
+                }
+              }
+              .drop_down_description {
+                width: 100%;
+                float: left;
+                span {
+                  color: rgb(150, 150, 150);
+                  line-height: 17.5px;
+                }
+              }
+            }
+            .drop_down_item_right {
+              width: 35px;
+              height: 35px;
+              float: right;
+              .drop_down_svg_right_item {
+                width: 22px;
+                height: 22px;
+                margin: 7px 0 7px 3px;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                border-radius: 50%;
+                display: flex;
+                svg {
+                  opacity: 0;
+                  width: 17px;
+                  height: 17px;
+                  margin: 2px 0 0 1.6px;
+                  path {
+                    fill: rgba(0,0,0,0.25);
+                  }
+                }
+              }
+            }
+          }
+          .drop_down_item.over, .drop_down_item:hover {
+            background-color: rgba(240, 242, 245, 0.36);
+          }
+          .drop_down_item.drop_down_active {
+            background-color: #f0f2f5;
+            .drop_down_svg_right_item {
+              background-color: #5181b8;
+              border-color: #5181b8;
+              svg {
+                opacity: 1 !important;
+                path {
+                  fill: rgba(255, 255, 255, 0.9);
+                }
+              }
+            }
+          }
+          .drop_down_item:hover .drop_down_svg_right_item {
+            svg {
+              opacity: 1;
+            }
+          }
+          .drop_down_empty_result {
+            box-sizing: border-box;
+            float: left;
+            padding: 7.5px 10px;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 300;
+            width: 100%;
+          }
+        }
+      }
+
+      .drop_down_scroll {
+        height: 100%;
+        width: 10px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: rgba(200, 200, 200, 0);
+        -webkit-transition: all 150ms linear;
+        -moz-transition: all 150ms linear;
+        -o-transition: all 150ms linear;
+        transition: all 150ms linear;
+        cursor: pointer;
+        .scroll_path {
+          background: rgba(211, 217, 221, 0.63);
+          width: 6px;
+          margin-left: 1px;
+          -webkit-transition: width 150ms linear, opacity 200ms linear;
+          -moz-transition: width 150ms linear, opacity 200ms linear;
+          -o-transition: width 150ms linear, opacity 200ms linear;
+          transition: width 150ms linear, opacity 200ms linear;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+        }
+      }
+
+      .drop_down_scroll:hover, .drop_down_scroll.over {
+        background: rgba(235, 235, 245, 0.4);
+        width: 10px;
+        .scroll_path {
+          width: 8px;
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .show {
+    display: block !important;
+  }
